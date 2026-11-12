@@ -12,7 +12,8 @@
         "--socket=wayland",
         "--device=dri",
         "--filesystem=xdg-run/discord-ipc-0",
-        "--filesystem=xdg-run/app/com.discordapp.Discord:create"
+        "--filesystem=xdg-run/app/com.discordapp.Discord:create",
+        "--share=network"
     ],
     "modules": [
         "python3-deps.json",
@@ -31,8 +32,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/ComicalSoftwares/Antimatter.git",
-                    "tag": "1.7",
-                    "commit": "cf2af4a930997ee19c96ba5066e5738b6a136248"
+                    "tag": "1.7.1",
+                    "commit": "b2cc2198fcae09395b1e1b5c6908113b57e30d51"
                 }
             ]
         }
