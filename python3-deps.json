@@ -1,20 +1,27 @@
 {
-    "name": "python3-requirements",
+    "name": "python3-deps.json",
     "buildsystem": "simple",
     "build-commands": [],
     "modules": [
         {
-            "name": "python3-pyflakes",
+            "name": "python3-ruff",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyflakes\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"ruff\" --no-build-isolation"
             ],
             "sources": [
-                {
+            	{
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/fd/52/98c9a0e4718abe887121279457bc7140115df22d714b7183880eb61e359f/pyflakes-4.1.0-py2.py3-none-any.whl",
-                    "sha256": "b2e05e6bac8e49b67be2a6ffa63422c60f7193fc72e8180255907b41ec997dc1"
-                }
+                    "url": "https://files.pythonhosted.org/packages/be/48/3df7d81249fd69ee6a49519b149fb5d11e13118fd7d0e8d65329a237087b/ruff-0.17.6-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+                    "sha256": "aa3b08254a732acba246891089a152c47c5733dc36b8ecb76ce8602f8326e5e4",
+                    "only-arches": ["x86_64"]
+            },
+            {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/eb/11/f3032684dcb3a676d7924545153d76fb56f76753e038f2ea650b99c71bdf/ruff-0.17.6-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+                    "sha256": "435241c61af5909a022f76219d3d1bf24730dc1bf0acabb5ddf4b569ab3cbb30",
+                    "only-arches": ["aarch64"]
+            }
             ]
         },
         {
@@ -54,8 +61,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/b1/28/9dd29175c1db777e6189e2a0bb5f37101adf19c3e509b236c8920f778d0b/black-26.10.1-py3-none-any.whl",
-                    "sha256": "28842f9a8207cc1df6eb983a35a14c5a0dfcd603d214fe82d84bef552afd2e3a"
+                    "url": "https://files.pythonhosted.org/packages/c2/4a/b4abc04dcc65c985fa66d6486393ad3051ff485ccabd9727aea43a242f88/python_lsp_server-1.15.0-py3-none-any.whl",
+                    "sha256": "d6ac11b467021310498f2dffb2edf09629bbcfe0d3073156db2337334a60463f"
                 },
                 {
                     "type": "file",
@@ -69,8 +76,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/65/b6/495438ad95e0102aff8f6786b5474202f38cd5d4700d03a72b77977dec10/importlib_metadata-10.1.0-py3-none-any.whl",
-                    "sha256": "cf45ce66a929c64e994185a809c04840d0501db17e663810d993d0f4829265c7"
+                    "url": "https://files.pythonhosted.org/packages/7f/61/0c0fae37eb561d8fddb788cbae0f227051628d70d67498a8a116c1f547d7/importlib_metadata-10.2.0-py3-none-any.whl",
+                    "sha256": "c7a4bf1c7479601f6b8e437cfc14f4f77028ba62a8f34ae95cd93d9774dfba51"
                 },
                 {
                     "type": "file",
@@ -94,8 +101,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/7c/ae/ecbbbfd0e4343a6a521d49b3c8656fb4643dee2a4f6eaf941cf3280391a8/platformdirs-4.14.5-py3-none-any.whl",
-                    "sha256": "8e778c6fa421516f4d3369449f8df3b0e1b72c0e0005fe88e3ec772d0a14e750"
+                    "url": "https://files.pythonhosted.org/packages/f8/46/3737af9f971f3934794103256d7f1ed6200a62be0c7b7ff09ac4cf6b3422/platformdirs-4.14.7-py3-none-any.whl",
+                    "sha256": "391513b74707c42335fff3ea17eaac657a7ee9ffcadd809634d34ea594d0122c"
                 },
                 {
                     "type": "file",
@@ -131,7 +138,17 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/b8/44/7bd2007260da11cccca29ba2d4c345f1287aa663db38ee7cefeabf6386a5/zipp-4.1.2-py3-none-any.whl",
                     "sha256": "b30cb6cd253122169c47de245ca24a86bac2a5d3802ba15bf7ba6414eb9e144d"
-                }
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/b1/28/9dd29175c1db777e6189e2a0bb5f37101adf19c3e509b236c8920f778d0b/black-26.10.1-py3-none-any.whl",
+                    "sha256": "28842f9a8207cc1df6eb983a35a14c5a0dfcd603d214fe82d84bef552afd2e3a"
+		},
+		{
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/0a/28/7ded071d0975dcc6d5d106ffbf7b3ca420f7caa3b8a235fa604b6e37032a/lazy_importer-0.1.0-py3-none-any.whl",
+                    "sha256": "bd93fab7bef18e842eea02b839410954d37889140dc64ca4d9680aec6880c739"
+		}
             ]
         }
     ]
