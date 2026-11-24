@@ -31,8 +31,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/ComicalSoftwares/Antimatter.git",
-                    "tag": "1.9",
-                    "commit": "fbb6f6d6004bf4e3c10d61625aa3c643662cc1a2"
+                    "tag": "2.0",
+                    "commit": "9316c2539864375821596f4e213a5044b631b6a1"
                 }
             ]
         }
